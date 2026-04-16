@@ -15,14 +15,22 @@
 1. [README.md](./README.md)
 2. [01-repo-charter.md](./01-repo-charter.md)
 3. [02-original-prompt-intake.md](./02-original-prompt-intake.md)
-4. 根据任务进入对应层文档
-5. 若要进入 Layer 3 或 Layer 4，必须先看完 [30-layer-3-architecture-handoff.md](./30-layer-3-architecture-handoff.md) 或 [40-layer-4-implementation-handoff.md](./40-layer-4-implementation-handoff.md)
+4. [05-cross-layer-glossary.md](./05-cross-layer-glossary.md)
+5. 根据任务进入对应层文档
+6. 若要进入 Layer 3 或 Layer 4，必须先看完 [30-layer-3-architecture-handoff.md](./30-layer-3-architecture-handoff.md) 或 [40-layer-4-implementation-handoff.md](./40-layer-4-implementation-handoff.md)
 
 ## 角色定位规则
 
 - 在 Repo 1 中，Agent 的首要身份不是“自由分析者”，而是“受约束的项目参与者”
 - 你必须先接受 hierarchy，再在 hierarchy 内工作
 - 你不能因为看到了原始提示词、旧习惯或局部实现想法，就把自己抬升到比 Layer 1/2 更高的位置
+
+## 术语基准纪律
+
+- [05-cross-layer-glossary.md](./05-cross-layer-glossary.md) 是 Repo 1 的公共语义基准与强制阅读项
+- glossary 一旦定义术语，后续 Layer 1/2/3/4 默认不得各自重定义
+- 下层若只是在说明如何使用这些术语，可以补充 operational context；但不能改写 semantic core
+- 若发现现有术语不足以支撑工作，应先回到 Repo 1 补 glossary，再继续下层推进
 
 ## 层级纪律
 
@@ -61,6 +69,7 @@
 - 若实现想法与架构入口冲突：回到 Layer 3 处理
 - 若架构设想与产品定义冲突：回到 Layer 2 处理
 - 若产品定义与上位原则冲突：回到 Layer 1 处理
+- 若某个术语在下层工作中不够用：先回到 glossary 处理
 - 若原始提示词中的片段与当前层级结构冲突：先做归位判断，不得原样搬运
 
 ## 禁止行为
@@ -68,6 +77,7 @@
 - 禁止把 Repo 1 误做成实现仓库
 - 禁止把 execution stages 升格为总项目结构
 - 禁止绕开 Layer 1/2 直接定义 Layer 3/4 的最终结果
+- 禁止绕开 glossary 在下层文档里私自造义或改义
 - 禁止以“用户没逐项列出”为理由忽略关键 open questions
 - 禁止站在仓库外重新否定“两仓库 + 四层 hierarchy”的总设计
 - 禁止把原始提示词当成项目结构本身直接继承
@@ -85,6 +95,7 @@
 
 - 当前任务确实属于 Layer 3 或 Layer 4
 - Layer 1 和 Layer 2 已能提供稳定输入
+- glossary 已能提供稳定的核心术语语义
 - 尚未确定的事项被标注为开放项，而不是被伪装成已决事实
 - 目标、任务、组织、token、监管四类关键要求没有被遗漏
 - 当前工作不再是“理解项目”，而是“承接项目并推进具体产物”
