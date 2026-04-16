@@ -19,6 +19,7 @@
 5. [06-open-questions-register.md](./06-open-questions-register.md)
 6. 根据任务进入对应层文档
 7. 若要进入 Layer 3 或 Layer 4，必须先看完 [30-layer-3-architecture-handoff.md](./30-layer-3-architecture-handoff.md) 或 [40-layer-4-implementation-handoff.md](./40-layer-4-implementation-handoff.md)
+8. 若要真正进入 Repo 2，必须再承认 [07-repo1-to-repo2-handoff-packet-template.md](./07-repo1-to-repo2-handoff-packet-template.md) 这个 handoff 控制接口
 
 ## 角色定位规则
 
@@ -39,6 +40,12 @@
 - 开放问题、临时假设、正式决定的状态变更，只能先在 register 中发生
 - Layer 1/2/3/4 文档只能引用 register 的当前状态，不能各自维持平行状态
 - 若下层发现新的开放项，应先回到 register 建项，再继续推进
+
+## Handoff 控制接口纪律
+
+- [07-repo1-to-repo2-handoff-packet-template.md](./07-repo1-to-repo2-handoff-packet-template.md) 是进入 Repo 2 前必须承认的控制接口
+- `07` 只打包稳定输入，不拥有独立术语定义权、状态定义权或新决定生成权
+- 若 Repo 2 觉得输入不足或冲突，必须按 `07` 的 `Return Path` 回 Repo 1，而不是在 Repo 2 内私自补定义
 
 ## 层级纪律
 
@@ -107,6 +114,7 @@
 - Layer 1 和 Layer 2 已能提供稳定输入
 - glossary 已能提供稳定的核心术语语义
 - register 已能提供开放问题与临时假设的当前状态
+- handoff packet 已能提供进入 Repo 2 的稳定控制接口
 - 尚未确定的事项被标注为开放项，而不是被伪装成已决事实
 - 目标、任务、组织、token、监管四类关键要求没有被遗漏
 - 当前工作不再是“理解项目”，而是“承接项目并推进具体产物”

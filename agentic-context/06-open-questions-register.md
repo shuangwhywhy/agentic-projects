@@ -84,6 +84,7 @@
 - 临时假设变成已正式决定：先改 register
 - 可以延后决定变成必须现在决定：先改 register
 - 已正式决定若因上位变化重新变成未决：也必须先改 register
+- 若某治理项的关闭条件要求先被上游 canonical 文档正式吸纳，则必须先完成上游吸纳，再迁移 register 状态
 
 各 layer 文档不允许各自偷偷改状态，只能引用 register 的当前状态。  
 如果 Layer 2 / Layer 3 / Layer 4 发现新的开放项，也必须先回到本 register 建项，再继续推进。
@@ -122,7 +123,7 @@
 
 | ID | 条目 | 当前状态 | 当前默认处理 / 决定摘要 | 影响层级 | 若不决定，会卡住什么 | owner | next action | 来源 / 依据 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| OQR-001 | 默认用户对接 endpoints 的最小角色集与职责合并边界 | 必须现在决定 | 无安全默认处理；不能继续只用“少数 endpoints”泛称推进下游设计 | L2 / L3 | 卡住 handoff packet、用户对接模型、组织责任结构 | L2 Owner | 由 L2 Owner 基于 `20-layer-2-product-prd.md` 的用户关系模型与 `30-layer-3-architecture-handoff.md` 的组织治理输入，在 `20-layer-2-product-prd.md` 吸纳最小 endpoints 角色集与合并边界 | `20-layer-2-product-prd.md` 当前产品层开放项；`30-layer-3-architecture-handoff.md` 对 endpoints 与责任结构的要求 |
+| OQR-001 | 默认用户对接 endpoints 的最小角色集与职责合并边界 | 已正式决定 | Layer 2 已正式固定默认双端点集合及其治理边界：默认用户表面只承认 `项目对接端点` 与 `监管升级端点`；前者负责汇报、澄清、确认、交付与日常同步，后者负责风险同步、偏差举证、合规提醒、升级与异常通知；`owner / manager / liability` 继续存在，但不等于默认用户端点 | L2 / L3 | 若被动摇，会让 handoff packet、用户对接模型与组织责任结构重新失稳 | L2 Owner | 在 `30-layer-3-architecture-handoff.md`、`07-repo1-to-repo2-handoff-packet-template.md` 与后续 handoff 实例中持续引用；若要改变该决定，先在 register 降级状态，再回 `20-layer-2-product-prd.md` 重写 canonical 产品决定 | `20-layer-2-product-prd.md` 默认用户对接角色集的正式决定；`05-cross-layer-glossary.md` 对默认双端点术语的 canonical 定义；`30-layer-3-architecture-handoff.md` 对双端点责任结构的承接约束 |
 | OQR-002 | GUI 最小可用视图优先级 | 可以延后决定 | 当前只保留产品表面对象列表，不对 GUI MVP 视图做先后排序 | L2 / L3 / L4 | 卡住后续 GUI 信息架构与前端切片，但不阻塞当前 Repo 1 治理资产 | L2 Owner | 当 GUI handoff packet 或 GUI slice 启动时回看，并将优先级结果吸纳到 `20-layer-2-product-prd.md` | `20-layer-2-product-prd.md` 产品表面对象与当前产品层开放项 |
 | OQR-003 | 不同复杂度任务是否需要不同产品工作模式 | 当前临时假设 | 当前沿用单一默认产品工作模式，不额外拆复杂度模式 | L2 / L3 | 若长期不决定，会卡住复杂度分层下的产品入口与治理策略 | L2 Owner | 当 Layer 3 启动复杂度分层设计，或当前单一模式无法承接具体 handoff 时，升级复审并决定是否在 `20-layer-2-product-prd.md` 吸纳多模式策略 | `20-layer-2-product-prd.md` 当前只定义一套默认交互模型；同文件当前产品层开放项已提出该问题 |
 | OQR-004 | 待验证进度与正式进度的产品呈现方式 | 当前临时假设 | 当前只固定语义区分与治理口径，不固定 UI 表达方式 | L2 / L3 / L4 | 卡住后续 GUI 呈现方案与状态可视化，但不阻塞当前语义与 handoff 约束 | L2 Owner | 当 GUI 产品切片开始，或 progress 可视化进入 Layer 3 / Layer 4 设计时回看；若出现 UI 方案冲突，立即升级复审 | `05-cross-layer-glossary.md` 已固定两者的口径关系；`20-layer-2-product-prd.md` 当前产品层开放项仍未决定其呈现方式 |
