@@ -1,0 +1,65 @@
+# Agentic Context Repo
+
+这个仓库是整个大项目的 `Project Context Repo`，不是实现仓库，也不是零散文档仓库。
+
+它的职责是把项目的上位秩序固定下来，让后续 Agent 在进入项目时先获得受控认知，再进入具体工作。
+
+## 这个仓库负责什么
+
+- 固定两仓库分工：`Repo 1 = context/control`，`Repo 2 = realization`
+- 固定四层 hierarchy：`Layer 1 Concept/Philosophy`、`Layer 2 Product/PRD`、`Layer 3 Architecture`、`Layer 4 Implementation`
+- 沉淀 Layer 1 和 Layer 2 的稳定资产
+- 为 Layer 3 和 Layer 4 提供进入条件、边界、阅读顺序、handoff 逻辑与工作约束
+- 约束后续 Agent 不要越级推翻上层，不要把 execution stages 误当成项目总秩序
+
+## 这个仓库不负责什么
+
+- 不负责完成最终系统架构
+- 不负责输出代码、运行时配置、测试脚本、部署工件
+- 不把 `research / design / implementation / review` 提升为项目的第一组织原则
+- 不把原始提示词原样当成最终项目结构
+
+## 建议阅读顺序
+
+1. [AGENTS.md](./AGENTS.md)
+2. [01-repo-charter.md](./01-repo-charter.md)
+3. [02-original-prompt-intake.md](./02-original-prompt-intake.md)
+4. 按职责进入对应层文档：
+   - [10-layer-1-concept-philosophy.md](./10-layer-1-concept-philosophy.md)
+   - [20-layer-2-product-prd.md](./20-layer-2-product-prd.md)
+   - [30-layer-3-architecture-handoff.md](./30-layer-3-architecture-handoff.md)
+   - [40-layer-4-implementation-handoff.md](./40-layer-4-implementation-handoff.md)
+5. 最后查看 [90-gap-map.md](./90-gap-map.md)
+
+## 这个原型的核心产物
+
+- `AGENTS.md`
+  - Agent 接入入口与行为约束
+- `01-repo-charter.md`
+  - Repo 1 的宪章、边界、与 Repo 2 的分工
+- `02-original-prompt-intake.md`
+  - 原始提示词的吸纳、归位、分离与重组方式
+- `10-layer-1-concept-philosophy.md`
+  - 第一层的稳定哲学与不可协商边界
+- `20-layer-2-product-prd.md`
+  - 第二层的产品定义、能力边界与 PRD 原型
+- `30-layer-3-architecture-handoff.md`
+  - 给架构层的上下文入口与 handoff 约束
+- `40-layer-4-implementation-handoff.md`
+  - 给实现层的上下文入口与 handoff 约束
+- `90-gap-map.md`
+  - 当前缺口、优先补齐顺序、防漂移规则
+
+## Repo 1 的使用方式
+
+- 若你在做项目理解、原则确认、产品界定，工作应停留在 Repo 1
+- 若你要开始系统结构设计，先完成 Repo 1 的阅读与定位，再到 Repo 2 进行 Layer 3 工作
+- 若你要开始编码、测试、配置、原型实现，只能在 Repo 2 进行 Layer 4 工作
+- 若你在下层发现冲突，不应直接修改下层以自洽，而应回到对应上层重新处理
+
+## 这个原型当前状态
+
+- Layer 1 已形成可用的 concept/philosophy 基线
+- Layer 2 已形成可继续扩展的 product/PRD 基线
+- Layer 3 和 Layer 4 仅形成入口、边界与 handoff 约束，还没有被错误地提前实现
+- 原始提示词已经被吸纳为项目要求来源，但未被当成最终结构直接照搬
