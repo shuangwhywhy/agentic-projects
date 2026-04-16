@@ -12,6 +12,7 @@
 - Agent 的接入入口与行为约束
 - 原始提示词的吸纳与归位规则
 - 跨层 glossary 语义基准
+- 开放问题 register 治理基准
 - Layer 1 的 concept/philosophy 基线
 - Layer 2 的 product/PRD 基线
 - Layer 3 和 Layer 4 的 handoff 入口
@@ -36,24 +37,25 @@
 - 高风险混淆项约束
 - 对 Layer 3 / Layer 4 的语义边界约束
 
-### Gap 1: 开放问题注册表
+### 本轮已完成：开放问题注册表
 
-需要一个持续维护的 open questions / assumptions / decisions 注册表，用来区分：
+已经新增统一 register，完成了：
 
-- 必须立即补全的问题
-- 可以延后拍板的问题
-- 已临时假设的问题
-- 已经决定的问题
+- 四种状态的硬边界
+- 决策状态变更的唯一 canonical 入口
+- 统一总表与治理字段
+- 首批治理项登记
+- 对 Layer 2 / Layer 3 / Layer 4 的引用纪律
 
-### Gap 2: Handoff Packet 模板
+### Gap 1: Handoff Packet 模板
 
 需要一个固定模板，把 Repo 1 向 Repo 2 的输入打包成清晰、可审阅、可回溯的 handoff packet。
 
-### Gap 3: Layer 3 任务启动模板
+### Gap 2: Layer 3 任务启动模板
 
 需要把“架构层必须回答什么”进一步做成可操作模板，减少后续 Agent 重新组织问题的成本。
 
-### Gap 4: Layer 4 追溯模板
+### Gap 3: Layer 4 追溯模板
 
 需要让每个实现项能明确链接回：
 
@@ -62,21 +64,20 @@
 - 哪个 Layer 3 对象或流程
 - 哪个验证口径
 
-### Gap 5: 用户端点与汇报节奏原型
+### Gap 4: 用户端点与汇报节奏原型
 
 当前 Product/PRD 已定义需要 endpoints，但还没有形成足够明确的用户端点职责草图和默认汇报节奏原型。
 
 ## 建议的补齐顺序
 
-1. 先补 `开放问题注册表`
-2. 再补 `Repo 1 -> Repo 2 handoff packet 模板`
-3. 再补 `Layer 3 架构任务启动模板`
-4. 再补 `Layer 4 实现追溯模板`
-5. 最后补 `用户端点职责草图与汇报节奏原型`
+1. 先补 `Repo 1 -> Repo 2 handoff packet 模板`
+2. 再补 `Layer 3 架构任务启动模板`
+3. 再补 `Layer 4 实现追溯模板`
+4. 最后补 `用户端点职责草图与汇报节奏原型`
 
 这个顺序的理由是：
 
-- glossary 已统一核心语言，下一步应先管理开放项，避免“未决问题伪装成已决”
+- glossary 与 register 已统一核心语言与治理状态，下一步应先固定 handoff 输入
 - 先做好 handoff，才能让 Repo 2 有稳定入口
 - 模板化 Layer 3/4，才能真正降低后续 Agent 接入成本
 
@@ -103,6 +104,7 @@ Repo 1 现在已经能向 Repo 2 提供：
 - 可稳定继承的上位原则
 - 可稳定继承的产品定义
 - 可稳定继承的核心术语语义基准
+- 可稳定继承的开放问题与临时假设当前状态
 - 明确的架构入口
 - 明确的实现入口
 - Agent 接入时的阅读顺序与纪律

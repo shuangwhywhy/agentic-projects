@@ -5,6 +5,9 @@
 本文件中的核心术语以 [05-cross-layer-glossary.md](./05-cross-layer-glossary.md) 为准。  
 本文件可以补充产品语境，但不改写 glossary 中已经固定的 semantic core。
 
+本文件中的开放问题只保留摘要。  
+其当前状态、owner、next action 与来源 / 依据 统一以 [06-open-questions-register.md](./06-open-questions-register.md) 为准。
+
 ## 产品定义
 
 这是一个 `Native` 的复杂任务多智能体系统产品。  
@@ -167,12 +170,14 @@ Layer 3 在 Repo 2 中至少必须承接这些产品问题：
 - 系统如何做过程期监管、证据归因与纠偏
 - CLI 和 GUI 如何共享同一项目真相，而不是各自漂移
 
-## 当前仍保留在产品层的开放项
+## 当前仍保留在产品层的开放项摘要
 
-- 默认 endpoints 应拆成几个产品角色，哪些合并，哪些分离
-- GUI 的最小可用视图优先级如何排序
-- 不同复杂度任务是否需要不同的产品工作模式
-- 直连指定 agent 时，用户界面如何保持责任与上下文不失真
-- 产品上如何呈现“待验证进度”和“正式进度”的差异
+以下事项仍属于产品层治理项，但其权威状态不再在本文件维护：
 
-这些问题可以继续补全，但不妨碍 Layer 2 已经成立。
+- 默认用户对接 endpoints 的最小角色集与职责合并边界
+- GUI 最小可用视图优先级
+- 不同复杂度任务是否需要不同产品工作模式
+- 直连指定 agent 的用户界面如何保持责任与上下文不失真
+- 待验证进度与正式进度的产品呈现方式
+
+这些事项的当前状态、owner、next action 与来源 / 依据，请统一查看 [06-open-questions-register.md](./06-open-questions-register.md)。
