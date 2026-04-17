@@ -20,7 +20,8 @@
 6. 根据任务进入对应层文档
 7. 若要进入 Layer 3 或 Layer 4，必须先看完 [30-layer-3-architecture-handoff.md](./30-layer-3-architecture-handoff.md) 或 [40-layer-4-implementation-handoff.md](./40-layer-4-implementation-handoff.md)
 8. 若要真正进入 Repo 2，必须再承认 [07-repo1-to-repo2-handoff-packet-template.md](./07-repo1-to-repo2-handoff-packet-template.md) 这个 handoff 控制接口
-9. 若要真正进入 Repo 2 的 Layer 3，必须再通过 [08-layer-3-task-start-template.md](./08-layer-3-task-start-template.md) 这道启动门
+9. 若任务主题落在核心真相模型轴，默认先绑定 [07a-repo1-to-repo2-handoff-packet-core-truth-model.md](./07a-repo1-to-repo2-handoff-packet-core-truth-model.md)，不得自行重拼第一份输入包
+10. 若要真正进入 Repo 2 的 Layer 3，必须再通过 [08-layer-3-task-start-template.md](./08-layer-3-task-start-template.md) 这道启动门；`07a = Ready` 只表示可被 `08` 绑定，不表示可直接开工
 
 ## 角色定位规则
 
@@ -46,6 +47,8 @@
 
 - [07-repo1-to-repo2-handoff-packet-template.md](./07-repo1-to-repo2-handoff-packet-template.md) 是进入 Repo 2 前必须承认的控制接口
 - `07` 只打包稳定输入，不拥有独立术语定义权、状态定义权或新决定生成权
+- 对 `核心真相模型` 主题，当前默认绑定实例是 [07a-repo1-to-repo2-handoff-packet-core-truth-model.md](./07a-repo1-to-repo2-handoff-packet-core-truth-model.md)
+- `07a` 只解决“拿什么去绑定”，不解决“绑定后是否能开始”
 - 若 Repo 2 觉得输入不足或冲突，必须按 `07` 的 `Return Path` 回 Repo 1，而不是在 Repo 2 内私自补定义
 
 ## Layer 3 启动门纪律
