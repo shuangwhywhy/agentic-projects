@@ -20,6 +20,7 @@
 6. 根据任务进入对应层文档
 7. 若要进入 Layer 3 或 Layer 4，必须先看完 [30-layer-3-architecture-handoff.md](./30-layer-3-architecture-handoff.md) 或 [40-layer-4-implementation-handoff.md](./40-layer-4-implementation-handoff.md)
 8. 若要真正进入 Repo 2，必须再承认 [07-repo1-to-repo2-handoff-packet-template.md](./07-repo1-to-repo2-handoff-packet-template.md) 这个 handoff 控制接口
+9. 若要真正进入 Repo 2 的 Layer 3，必须再通过 [08-layer-3-task-start-template.md](./08-layer-3-task-start-template.md) 这道启动门
 
 ## 角色定位规则
 
@@ -46,6 +47,12 @@
 - [07-repo1-to-repo2-handoff-packet-template.md](./07-repo1-to-repo2-handoff-packet-template.md) 是进入 Repo 2 前必须承认的控制接口
 - `07` 只打包稳定输入，不拥有独立术语定义权、状态定义权或新决定生成权
 - 若 Repo 2 觉得输入不足或冲突，必须按 `07` 的 `Return Path` 回 Repo 1，而不是在 Repo 2 内私自补定义
+
+## Layer 3 启动门纪律
+
+- [08-layer-3-task-start-template.md](./08-layer-3-task-start-template.md) 是进入 Repo 2 Layer 3 前必须通过的启动门
+- `08` 负责某次具体任务能不能启动，不负责打包稳定输入，也不负责重新定义 Layer 3 问题空间
+- 没有通过 `08` 的 `Start Gate`，任务就不能进入 Repo 2 的 Layer 3 承接
 
 ## 层级纪律
 
@@ -115,6 +122,7 @@
 - glossary 已能提供稳定的核心术语语义
 - register 已能提供开放问题与临时假设的当前状态
 - handoff packet 已能提供进入 Repo 2 的稳定控制接口
+- Layer 3 任务启动模板已完成当前任务的准入检查
 - 尚未确定的事项被标注为开放项，而不是被伪装成已决事实
 - 目标、任务、组织、token、监管四类关键要求没有被遗漏
 - 当前工作不再是“理解项目”，而是“承接项目并推进具体产物”

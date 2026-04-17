@@ -30,6 +30,9 @@
 本 packet 不拥有独立术语定义权，也不拥有独立状态定义权。  
 若与 glossary 或 register 冲突，以 glossary 与 register 为准。
 
+handoff packet 进入 Repo 2 后，具体 Layer 3 任务必须再经过 [08-layer-3-task-start-template.md](./08-layer-3-task-start-template.md) 的启动门。  
+`07` 只负责稳定输入打包，不负责某次具体任务能不能启动。
+
 ## 使用原则
 
 - 只写已经稳定的输入，不把未决事项伪装成稳定输入
