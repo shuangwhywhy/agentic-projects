@@ -1,0 +1,39 @@
+{
+  "name": "four-layer-sequential",
+  "version": "0.1.0",
+  "description": "Sequential four-layer workflow plugin that chains intake, path location, and path economics planning.",
+  "author": {
+    "name": "Local Workspace",
+    "email": "",
+    "url": ""
+  },
+  "homepage": "",
+  "repository": "",
+  "license": "UNLICENSED",
+  "keywords": [
+    "four-layer",
+    "planning",
+    "workflow"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Four-Layer Sequential",
+    "shortDescription": "Run intake, path location, and economics planning in order.",
+    "longDescription": "Bundles three four-layer reasoning skills and adds a sequential entry skill that feeds each stage into the next.",
+    "developerName": "Local Workspace",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Planning"
+    ],
+    "websiteURL": "",
+    "privacyPolicyURL": "",
+    "termsOfServiceURL": "",
+    "defaultPrompt": [
+      "用 four-layer 串联分析这段需求并推荐路径。",
+      "先做 intake，再定位 path，最后做 economics decision。",
+      "把这段混合输入做成完整的四层串联报告。"
+    ],
+    "brandColor": "#2563EB"
+  }
+}

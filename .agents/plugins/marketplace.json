@@ -1,0 +1,20 @@
+{
+  "name": "agentic-projects-local",
+  "interface": {
+    "displayName": "Agentic Projects Local Plugins"
+  },
+  "plugins": [
+    {
+      "name": "four-layer-sequential",
+      "source": {
+        "source": "local",
+        "path": "./plugins/four-layer-sequential"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
